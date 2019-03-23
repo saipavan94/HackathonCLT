@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
         if (err) throw err;
         // console.log(user);
         let temp = user.data
-        if (temp != []) {
+        if (temp.length > 0) {
             temp = JSON.parse(temp)
         }
         temp.push(data)

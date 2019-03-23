@@ -19,11 +19,13 @@ module.exports = (req, res, next) => {
                 data = []
             }
             data.forEach(element => {
-                if (element.cause == str && !user.profileStatus) {
+                // console.log(user.profileStatus)
+                if (element.cause == str && user[i].profileStatus) {
                     re.push(element)
                 }
             });
             if (i === user.length - 1) {
+                console.log(re)
                 res.json({ data: re })
 
             }

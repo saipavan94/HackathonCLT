@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
     }, function (err, users) {
         if (err) throw err;
         console.log(users)
-        if (users.status) {
+        if (users && users.status) {
             User.findOne({
                 userId: userid
             }, function (err, user) {

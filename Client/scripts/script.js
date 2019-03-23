@@ -62,7 +62,7 @@ app.controller('ctrl', function ($scope, $state, $http, $mdToast) {
   $scope.options = {
     'user': ["Home", "Manage", "SignOut"],
     'medical': ["Home", "Request", "Access Data", "Add Data", "SignOut"],
-    'research': ["Explore", "Chats"]
+    'research': ["Explore", "Chats", "SignOut"]
   }
   $scope.searchElement = function (data) {
     $http.get($scope.uri + '/search/' + data).then(function (data) {
@@ -78,7 +78,13 @@ app.controller('ctrl', function ($scope, $state, $http, $mdToast) {
     $http.get($scope.uri + '/getUserInfo/' + id + '/' + $scope.userDetails.userId).then(function (data) {
       if (data.data.success) {
         $scope.patientDetails = data.data
-        $scope.tilesData = JSON.parse(data.data.data)
+        if (data.data.data.length > 0) {
+          $scope.tilesData = JSON.parse(data.data.data)
+
+        } else {
+          $scope.tilesData = []
+
+        }
 
         // console.log(data);
         $state.go('home.displayRecords');
