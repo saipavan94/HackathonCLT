@@ -1,0 +1,21 @@
+<div flex="100" layout="column" id="layout">
+    <div layout="row">
+        <md-input-container flex=" 100">
+            <input required ng-model="search">
+        </md-input-container>
+        <md-button class="md-raised md-primary" ng-click="searchElement(search)">Search</md-button>
+
+    </div>
+    <div layout="row" layout-wrap>
+        <div style="border:2px solid black" style="padding-top:1%" flex="100"
+            ng-repeat=" elm in searchResult track by $index">
+            <div flex="70">
+                <h3>Person {{ $index+1}}</h3>
+            </div>
+            <div flex="30">
+                <md-button class="md-raised md-primary">Search</md-button>
+
+            </div>
+        </div>
+    </div>
+</div>

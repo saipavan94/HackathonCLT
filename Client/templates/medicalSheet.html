@@ -1,0 +1,79 @@
+<div flex="100" layout="row">
+    <div flex="100" layout="row" layout-wrap>
+        <div layout="row" flex="100" layout-padding layout-align="space-around center">
+            <!-- <div> -->
+            <md-input-container flex="30">
+                <label>USER ID</label>
+                <input ng-model="patientDetails.userId" disabled>
+            </md-input-container>
+            <!-- </div> -->
+            <!-- <div> -->
+            <md-input-container flex="30">
+                <label>NAME</label>
+                <input ng-model="patientDetails.name" disabled>
+            </md-input-container>
+            <md-input-container flex="30">
+                <label>Age</label>
+                <input ng-model="patientDetails.age">
+            </md-input-container>
+        </div>
+        <div layout="row" flex="100" layout-padding layout-align="space-around center">
+
+            <md-input-container flex="20">
+                <label>Sex</label>
+                <input ng-model="patientDetails.sex">
+            </md-input-container>
+            <md-input-container flex="20">
+                <label>Weight</label>
+                <input ng-model="patientDetails.newWeight">
+            </md-input-container>
+            <md-input-container flex="20">
+                <label>Height</label>
+                <input ng-model="patientDetails.height">
+            </md-input-container>
+            <md-input-container flex="20">
+                <label>BP</label>
+                <input ng-model="patientDetails.bp">
+            </md-input-container>
+        </div>
+
+        <div layout="row" flex="100" layout-padding layout-align="center">
+
+            <md-input-container flex="100">
+                <label>Cause</label>
+                <input ng-model="patientDetails.cause">
+            </md-input-container>
+
+        </div>
+        <div layout="row" flex="100" layout-padding layout-align="center">
+
+            <md-input-container flex="100">
+                <label>Observations</label>
+                <input ng-model="patientDetails.observation">
+            </md-input-container>
+
+        </div>
+
+        <div layout="row" flex="100" layout-padding layout-align="center">
+
+            <md-input-container flex="100">
+                <label>Medication</label>
+                <input ng-model="patientDetails.medication">
+            </md-input-container>
+
+        </div>
+
+        <div layout="row" flex="100" layout-padding layout-align="space-around center">
+
+            <div flex-gt-xs>
+                <h4>Next Visit</h4>
+                <md-datepicker ng-model="patientDetails.nextVisit" md-placeholder="Enter date"></md-datepicker>
+            </div>
+            <md-button class="md-raised md-primary" ng-click="saveMedicalSheet(patientDetails)">Save & Submit
+            </md-button>
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div flex="100" layout="row">
+    <div flex="100" layout="row">
+        <div layout="row" flex="100" layout-padding layout-align="space-around center">
+            <!-- <div> -->
+            <md-input-container>
+                <label>USER ID</label>
+                <input ng-model="userDetails.userId" disabled>
+            </md-input-container>
+            <!-- </div> -->
+            <!-- <div> -->
+            <md-input-container>
+                <label>NAME</label>
+                <input ng-model="userDetails.name" disabled>
+            </md-input-container>
+            <!-- </div> -->
+            <!-- <div> -->
+            <md-input-container>
+                <label>EMAIL</label>
+                <input ng-model="userDetails.email" disabled>
+            </md-input-container>
+            <!-- </div> -->
+            <md-input-container style="margin-top:0">
+                <label>Profile Status</label>
+                <md-select ng-model="userDetails.status" ng-change="changeStatus(userDetails.status)">
+                    <md-option ng-value="false">Private</md-option>
+                    <md-option ng-value="true">Public</md-option>
+
+                </md-select>
+            </md-input-container>
+
+        </div>
+
+    </div>
+</div>

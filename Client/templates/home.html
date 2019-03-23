@@ -1,0 +1,13 @@
+<div flex="100" layout="row">
+  <md-card flex="20" layout="column" layout-wrap style="background:#353535;padding-top: 1%;padding-bottom: 1%">
+    <div layout="row" class="sideNavOption" ng-repeat="i in displayList" ng-click="sideNavOption(i)"
+      layout-align="center" layout-padding>
+      {{i}}
+    </div>
+
+  </md-card>
+  <md-card flex="80" layout="row" style="padding:1%">
+    <div ui-view flex="100"></div>
+
+  </md-card>
+</div>
